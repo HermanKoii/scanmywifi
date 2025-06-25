@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Security Type Colors -->
+    <color name="security_open">#FF0000</color>          <!-- Red for Open networks -->
+    <color name="security_weak">#FFA500</color>         <!-- Orange for weak security -->
+    <color name="security_medium">#FFC107</color>       <!-- Amber for medium security -->
+    <color name="security_strong">#4CAF50</color>       <!-- Green for strong security -->
+    <color name="security_very_strong">#2196F3</color>  <!-- Blue for very strong security -->
+    <color name="security_unknown">#9E9E9E</color>      <!-- Gray for unknown security -->
+</resources>

@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 # Android specific
+=======
+# Android Studio
+>>>>>>> pr-2-relayrelayrelay-scanmywifi
 *.iml
 .gradle/
 build/
 local.properties
 .idea/
+<<<<<<< HEAD
 captures/
 
 # Keystore files (avoid committing keystore to version control)
@@ -21,5 +26,41 @@ gradle-app.setting
 *.log
 
 # OS generated files
+=======
+
+# Gradle files
+*.gradle
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Android generated files
+bin/
+gen/
+
+# Proguard
+proguard/
+
+# External native build folder
+.externalNativeBuild
+
+# NDK
+obj/
+
+# Key store files
+*.jks
+*.keystore
+
+# Signing files
+signing.properties
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# OS-specific files
+>>>>>>> pr-2-relayrelayrelay-scanmywifi
 .DS_Store
 Thumbs.db

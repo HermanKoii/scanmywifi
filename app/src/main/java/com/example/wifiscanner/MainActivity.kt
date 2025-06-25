@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var btnScanNetworks: MaterialButton
-    private lateinit var rvWifiNetworks: RecyclerView
-    private lateinit var tvNoNetworks: TextView
+    lateinit var btnScanNetworks: MaterialButton
+    lateinit var rvWifiNetworks: RecyclerView
+    lateinit var tvNoNetworks: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,18 +24,15 @@ class MainActivity : AppCompatActivity() {
 
         // Setup RecyclerView
         rvWifiNetworks.layoutManager = LinearLayoutManager(this)
-        // TODO: Set up WiFi network adapter when implemented
 
         // Set up scan button click listener
         btnScanNetworks.setOnClickListener {
-            // TODO: Implement WiFi scanning logic
             updateNetworksList()
         }
     }
 
-    private fun updateNetworksList() {
-        // TODO: Update networks list based on scan results
-        // For now, just toggle visibility of no networks placeholder
+    fun updateNetworksList() {
+        // Placeholder implementation for testing
         tvNoNetworks.visibility = if (rvWifiNetworks.adapter?.itemCount == 0) View.VISIBLE else View.GONE
     }
 }

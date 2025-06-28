@@ -1,4 +1,4 @@
-# Android Studio
+# Android Studio files
 .idea/
 *.iml
 *.iws
@@ -7,20 +7,22 @@
 # Gradle
 .gradle/
 build/
+app/build/
 local.properties
-
-# OS generated files
-.DS_Store
-Thumbs.db
+gradle/
+gradlew
+gradlew.bat
 
 # Compiled class files
 *.class
+*.kotlin_module
 
 # Log files
 *.log
 
-# Kotlin build files
-out/
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # Android specific
 bin/
@@ -28,14 +30,27 @@ gen/
 captures/
 .externalNativeBuild/
 .cxx/
+*.ap_
+*.aab
 
 # Dependency directories
 node_modules/
+vendor/
 
 # Virtual environment
 venv/
 .env
 
+# Test results
+test-results/
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# Sensitive configuration
+*.keystore
+
 # Misc
 *.swp
 *.swo
+*.so

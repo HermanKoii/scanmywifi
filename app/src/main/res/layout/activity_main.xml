@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
     <!-- Header/Title -->
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Scan Networks"
         android:layout_margin="16dp"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@id/tv_app_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -39,6 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
+        android:background="@color/colorBackgroundDark"
         app:layout_constraintTop_toBottomOf="@id/btn_scan_networks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +54,7 @@
         android:layout_height="wrap_content"
         android:text="No WiFi Networks Found"
         android:textSize="18sp"
+        android:textColor="@color/colorTextSecondary"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/rv_wifi_networks"
         app:layout_constraintStart_toStartOf="parent"

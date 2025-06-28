@@ -1,0 +1,41 @@
+# Android specific and Android Studio
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+
+# Gradle files
+*.gradle
+gradle-app.setting
+.gradletasknamecache
+
+# Compiled files
+*.class
+bin/
+gen/
+build/
+captures/
+
+# Log files
+*.log
+
+# Keystore and signing files (avoid committing sensitive information)
+*.jks
+*.keystore
+signing.properties
+
+# External build and native files
+.externalNativeBuild
+proguard/
+obj/
+
+# Additional Android specifics
+google-services.json
+
+# IDE-specific files
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

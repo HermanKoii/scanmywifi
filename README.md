@@ -1,25 +1,27 @@
-# WiFi Scanner Android App
+# WiFi Scanner App
 
-## Project Overview
-A comprehensive WiFi Scanner app for Android 10+ devices that allows users to scan, discover, and analyze nearby WiFi networks.
-
-## Permissions
-This app requires the following permissions:
-- `ACCESS_WIFI_STATE`: Read WiFi network information
-- `CHANGE_WIFI_STATE`: Enable/disable WiFi
-- `ACCESS_FINE_LOCATION`: Required for detailed WiFi scanning on Android 10+
-
-## Minimum SDK Version
-Target: Android 10 (API level 29)
-
-## Features
-- Comprehensive WiFi network scanning
-- Detailed network information
-- Signal strength visualization
-- Permission-aware functionality
+## Overview
+A simple Android application for scanning nearby WiFi networks.
 
 ## Development Setup
-1. Clone the repository
-2. Open in Android Studio
-3. Sync Gradle files
-4. Run on an Android 10+ device or emulator
+1. Ensure you have Android Studio installed
+2. Clone the repository
+3. Open the project in Android Studio
+
+## Running Tests
+### Unit Tests
+- Run `./gradlew test` to execute unit tests
+- Robolectric is used for Android unit testing
+
+### Instrumentation Tests
+- Run `./gradlew connectedAndroidTest` to run tests on a connected device or emulator
+
+## Key Features
+- WiFi network scanning
+- Permission handling
+- Simple, intuitive UI
+
+## Testing Notes
+- Test coverage focuses on core functionality
+- Robolectric provides Android unit testing support
+- Espresso used for UI interaction tests

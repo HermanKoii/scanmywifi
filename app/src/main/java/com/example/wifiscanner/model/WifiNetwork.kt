@@ -3,6 +3,7 @@ package com.example.wifiscanner.model
 import android.net.wifi.ScanResult
 import androidx.annotation.DrawableRes
 import com.example.wifiscanner.R
+import com.wifiscanner.utils.SignalStrengthInterpreter
 
 data class WifiNetwork(
     val ssid: String,
@@ -44,10 +45,10 @@ data class WifiNetwork(
     @DrawableRes
     fun getSignalStrengthIcon(): Int {
         return when {
-            signalStrength > -50 -> R.drawable.ic_wifi_signal_high
-            signalStrength > -60 -> R.drawable.ic_wifi_signal_high
-            signalStrength > -70 -> R.drawable.ic_wifi_signal_medium
-            signalStrength > -80 -> R.drawable.ic_wifi_signal_low
+            signalStrength >= -50 -> R.drawable.ic_wifi_signal_high
+            signalStrength >= -60 -> R.drawable.ic_wifi_signal_high
+            signalStrength >= -70 -> R.drawable.ic_wifi_signal_medium
+            signalStrength >= -80 -> R.drawable.ic_wifi_signal_low
             else -> R.drawable.ic_wifi_signal_none
         }
     }

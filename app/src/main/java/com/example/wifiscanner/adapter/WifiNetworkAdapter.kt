@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wifiscanner.R
 import com.example.wifiscanner.model.WifiNetwork
+import com.wifiscanner.utils.SignalStrengthInterpreter
 
 class WifiNetworkAdapter(
     private val networks: List<WifiNetwork>
@@ -36,7 +37,10 @@ class WifiNetworkAdapter(
             networkNameTextView.text = network.ssid
             networkDetailsTextView.text = "Security: ${network.securityType} | BSSID: ${network.bssid}"
             signalStrengthImageView.setImageResource(network.getSignalStrengthIcon())
-            signalStrengthTextView.text = network.getSignalStrengthText()
+            signalStrengthTextView.apply {
+                text = network.getSignalStrengthText()
+                setTextColor(context.getColor(SignalStrengthInterpreter.getSignalStrengthColorRes(network.signalStrength)))
+            }
         }
     }
 }

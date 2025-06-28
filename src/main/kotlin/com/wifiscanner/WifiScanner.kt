@@ -22,6 +22,7 @@ class WifiScanner(private val context: Context) {
      * 
      * @return List of WiFi networks found during the scan
      * @throws SecurityException if location permissions are not granted
+     * @throws IllegalStateException if WiFi is not enabled
      */
     @RequiresPermission(
         anyOf = [

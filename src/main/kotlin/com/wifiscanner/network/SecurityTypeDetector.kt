@@ -19,7 +19,9 @@ enum class SecurityType {
  * Handles detection of WiFi network security types with robust error management
  */
 class SecurityTypeDetector {
-    companion private const val TAG = "SecurityTypeDetector"
+    companion object {
+        private const val TAG = "SecurityTypeDetector"
+    }
 
     /**
      * Detect security type of a WiFi network with comprehensive error handling

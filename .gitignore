@@ -1,0 +1,25 @@
+# Android specific
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+captures/
+
+# Keystore files (avoid committing keystore to version control)
+*.jks
+*.keystore
+
+# Signing properties (keep signing details out of version control)
+signing.properties
+
+# Gradle files
+gradle-app.setting
+.gradletasknamecache
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

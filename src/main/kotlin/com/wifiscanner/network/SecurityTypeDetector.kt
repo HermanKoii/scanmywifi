@@ -19,7 +19,9 @@ enum class SecurityType {
  * Handles detection of WiFi network security types with robust error management
  */
 class SecurityTypeDetector {
-    companion private const val TAG = "SecurityTypeDetector"
+    companion object {
+        private const val TAG = "SecurityTypeDetector"
+    }
 
     /**
      * Detect security type of a WiFi network with comprehensive error handling
@@ -35,7 +37,7 @@ class SecurityTypeDetector {
 
         return try {
             when {
-                // Check for specific security capabilities
+                // Check for specific security capabilities with improved detection
                 scanResult.capabilities.contains("WPA3", ignoreCase = true) -> SecurityType.WPA3
                 scanResult.capabilities.contains("WPA2", ignoreCase = true) -> SecurityType.WPA2
                 scanResult.capabilities.contains("WPA", ignoreCase = true) -> SecurityType.WPA

@@ -6,6 +6,19 @@ import com.wifiscanner.models.WiFiSecurityType
  * Utility class for mapping WiFi network capabilities to security types.
  */
 object WiFiSecurityMapper {
+    // Mock color resources for testing
+    object R {
+        object color {
+            const val holo_red_dark = 1
+            const val holo_red_light = 2
+            const val holo_orange_dark = 3
+            const val holo_orange_light = 4
+            const val holo_green_light = 5
+            const val holo_green_dark = 6
+            const val darker_gray = 7
+        }
+    }
+
     /**
      * Maps raw network capabilities to a WiFiSecurityType.
      *
@@ -60,13 +73,13 @@ object WiFiSecurityMapper {
      */
     fun getSecurityColor(securityType: WiFiSecurityType): Int {
         return when (securityType.level) {
-            0 -> android.R.color.holo_red_dark    // Open/No Security
-            1 -> android.R.color.holo_red_light   // Very Weak
-            2 -> android.R.color.holo_orange_dark // Weak
-            3 -> android.R.color.holo_orange_light // Moderate
-            4 -> android.R.color.holo_green_light  // Strong
-            5 -> android.R.color.holo_green_dark   // Most Secure
-            else -> android.R.color.darker_gray   // Unknown
+            0 -> R.color.holo_red_dark    // Open/No Security
+            1 -> R.color.holo_red_light   // Very Weak
+            2 -> R.color.holo_orange_dark // Weak
+            3 -> R.color.holo_orange_light // Moderate
+            4 -> R.color.holo_green_light  // Strong
+            5 -> R.color.holo_green_dark   // Most Secure
+            else -> R.color.darker_gray   // Unknown
         }
     }
 }

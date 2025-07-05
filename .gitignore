@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 __pycache__/
 *.py[cod]
 *$py.class
@@ -10,3 +11,29 @@ build/
 .env
 .venv/
 venv/
+=======
+# Android Studio
+*.iml
+.gradle/
+build/
+.idea/
+local.properties
+
+# Kotlin/Java compiled files
+*.class
+*.dex
+
+# Dependency directories
+/node_modules
+/app/build
+
+# Logging files
+*.log
+
+# Sensitive information
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+>>>>>>> pr-1-souravg77-scanmywifi

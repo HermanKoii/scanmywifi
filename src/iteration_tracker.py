@@ -29,7 +29,7 @@ class IterationState:
         """
         self.current_iteration += 1
         
-        if self.max_iterations is not None and self.current_iteration >= self.max_iterations:
+        if self.max_iterations is not None and self.current_iteration > self.max_iterations:
             self.status = IterationStatus.COMPLETED
             raise StopIteration("Maximum iterations reached")
         

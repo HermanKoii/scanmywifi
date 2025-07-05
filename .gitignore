@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 __pycache__/
 *.py[cod]
 *$py.class
@@ -32,8 +33,70 @@ local.properties
 
 # Sensitive information
 .env
+=======
+# Android Studio
+.idea/
+*.iml
+.gradle/
+build/
+captures/
+>>>>>>> pr-4-souravg77-scanmywifi
 
 # OS generated files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 >>>>>>> pr-1-souravg77-scanmywifi
+=======
+
+# Kotlin/Android specific
+*.class
+*.log
+*.apk
+*.aar
+*.dex
+*.module
+
+# Dependency directories
+/node_modules
+/jspm_packages
+
+# Gradle
+gradle/
+gradlew
+gradlew.bat
+
+# Local configuration file
+local.properties
+
+# Log files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+/captures
+
+# Intellij
+*.ipr
+*.iws
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+.cxx/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
+>>>>>>> pr-4-souravg77-scanmywifi

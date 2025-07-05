@@ -17,10 +17,10 @@ class WifiNetworkTest {
 
     @Test
     fun `test signal strength text mapping`() {
-        val excellentSignal = WifiNetwork("Test", "00:00:00", -40, "WPA2")
-        val strongSignal = WifiNetwork("Test", "00:00:00", -55, "WPA2")
-        val goodSignal = WifiNetwork("Test", "00:00:00", -65, "WPA2")
-        val weakSignal = WifiNetwork("Test", "00:00:00", -75, "WPA2")
+        val excellentSignal = WifiNetwork("Test", "00:00:00", -50, "WPA2")
+        val strongSignal = WifiNetwork("Test", "00:00:00", -60, "WPA2")
+        val goodSignal = WifiNetwork("Test", "00:00:00", -70, "WPA2")
+        val weakSignal = WifiNetwork("Test", "00:00:00", -80, "WPA2")
         val veryWeakSignal = WifiNetwork("Test", "00:00:00", -90, "WPA2")
 
         assertEquals("Excellent", excellentSignal.getSignalStrengthText())
@@ -45,5 +45,25 @@ class WifiNetworkTest {
         `when`(mockScanResult.capabilities).thenReturn("")
         val openNetwork = WifiNetwork.fromScanResult(mockScanResult)
         assertEquals("Open", openNetwork.securityType)
+
+        // Test additional security types
+        `when`(mockScanResult.capabilities).thenReturn("[WPA3-SAE-CCMP]")
+        val wpa3Network = WifiNetwork.fromScanResult(mockScanResult)
+        assertEquals("WPA3", wpa3Network.securityType)
+    }
+
+    @Test
+    fun `test signal strength icon mapping`() {
+        val excellentSignal = WifiNetwork("Test", "00:00:00", -50, "WPA2")
+        val strongSignal = WifiNetwork("Test", "00:00:00", -60, "WPA2")
+        val goodSignal = WifiNetwork("Test", "00:00:00", -70, "WPA2")
+        val weakSignal = WifiNetwork("Test", "00:00:00", -80, "WPA2")
+        val veryWeakSignal = WifiNetwork("Test", "00:00:00", -90, "WPA2")
+
+        assertEquals(com.example.wifiscanner.R.drawable.ic_wifi_signal_high, excellentSignal.getSignalStrengthIcon())
+        assertEquals(com.example.wifiscanner.R.drawable.ic_wifi_signal_high, strongSignal.getSignalStrengthIcon())
+        assertEquals(com.example.wifiscanner.R.drawable.ic_wifi_signal_medium, goodSignal.getSignalStrengthIcon())
+        assertEquals(com.example.wifiscanner.R.drawable.ic_wifi_signal_low, weakSignal.getSignalStrengthIcon())
+        assertEquals(com.example.wifiscanner.R.drawable.ic_wifi_signal_none, veryWeakSignal.getSignalStrengthIcon())
     }
 }

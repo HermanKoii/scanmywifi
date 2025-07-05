@@ -33,10 +33,10 @@ data class WifiNetwork(
 
     fun getSignalStrengthText(): String {
         return when {
-            signalStrength > -50 -> "Excellent"
-            signalStrength > -60 -> "Strong"
-            signalStrength > -70 -> "Good"
-            signalStrength > -80 -> "Weak"
+            signalStrength >= -50 -> "Excellent"
+            signalStrength >= -60 -> "Good"
+            signalStrength >= -70 -> "Fair"
+            signalStrength >= -80 -> "Weak"
             else -> "Very Weak"
         }
     }
@@ -44,10 +44,10 @@ data class WifiNetwork(
     @DrawableRes
     fun getSignalStrengthIcon(): Int {
         return when {
-            signalStrength > -50 -> R.drawable.ic_wifi_signal_high
-            signalStrength > -60 -> R.drawable.ic_wifi_signal_high
-            signalStrength > -70 -> R.drawable.ic_wifi_signal_medium
-            signalStrength > -80 -> R.drawable.ic_wifi_signal_low
+            signalStrength >= -50 -> R.drawable.ic_wifi_signal_high
+            signalStrength >= -60 -> R.drawable.ic_wifi_signal_high
+            signalStrength >= -70 -> R.drawable.ic_wifi_signal_medium
+            signalStrength >= -80 -> R.drawable.ic_wifi_signal_low
             else -> R.drawable.ic_wifi_signal_none
         }
     }

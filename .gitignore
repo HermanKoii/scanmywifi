@@ -1,0 +1,32 @@
+# Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Gradle files
+gradle/
+gradlew
+gradlew.bat
+
+# Dependency directories
+/node_modules/
+/app/build/
+
+# Sensitive or local files
+local.properties
+.env
+
+# Logs
+*.log
+
+# Kotlin/Android specific
+*.class
+*.apk
+*.aar
+*.dex

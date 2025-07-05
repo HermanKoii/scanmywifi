@@ -65,6 +65,7 @@ class SecurityTypeDetectorTest {
 
     @Test
     fun `test security description mapping`() {
+        val detector = SecurityTypeDetector()
         assertEquals("Open Network (No Security)", detector.getSecurityDescription(SecurityType.OPEN))
         assertEquals("WEP Protected Network", detector.getSecurityDescription(SecurityType.WEP))
         assertEquals("WPA Protected Network", detector.getSecurityDescription(SecurityType.WPA))
